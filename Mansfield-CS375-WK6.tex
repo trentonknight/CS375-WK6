@@ -72,14 +72,24 @@ For any regular language L, there exists a number p such that for any string w i
 \section{}
 Prove that the below generates the language defined by the regular expression: $\mathbf{a^*bb}$
 $$\mathbf {Prod 1 \quad S \to aS \mid bb}$$
-\begin{center}
-$S \Longrightarrow aS$\\
-$\Longrightarrow aaS$\\
-$\Longrightarrow aaaS$\\
-$\Longrightarrow aaaaS$\\
-$\Longrightarrow aaaaaS$\\
+\begin{equation}
+\begin{split}
+&S \Longrightarrow aS\\
+&\Longrightarrow aaS\\
+&\Longrightarrow aaaS\\
+&\Longrightarrow aaaaS\\
+&\Longrightarrow aaaaaS\\
+&\Longrightarrow aaaaabb\\
+\end{split}
+\end{equation}
 This derivation could continue infinitely until terminal bb is appended.
-$\Longrightarrow aaaaabb$\\
-\end{center}
+\section{}
+\begin{equation}
+\begin{split}
+&\mathbf {Prod 1 \quad S \to XaXaX}\\
+&\mathbf {Prod 2 \quad X \to aX \mid bX \mid \Lambda}\\
+\end{split}
+\end{equation}
+\section{}
 \section{}
 \end{document}

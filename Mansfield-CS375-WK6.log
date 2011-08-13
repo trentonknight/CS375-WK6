@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  13 AUG 2011 18:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  13 AUG 2011 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,11 +620,11 @@ Overfull \hbox (47.15488pt too wide) in paragraph at lines 60--61
 Here is how much of TeX's memory you used:
  13057 strings out of 493633
  274362 string characters out of 3143378
- 345398 words of memory out of 3000000
+ 346398 words of memory out of 3000000
  16073 multiletter control sequences out of 15000+200000
  10594 words of font info for 38 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 56i,10n,73p,488b,862s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,15n,73p,488b,862s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
@@ -636,7 +636,7 @@ ic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb>
-Output written on Mansfield-CS375-WK6.pdf (4 pages, 99260 bytes).
+Output written on Mansfield-CS375-WK6.pdf (4 pages, 100398 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
