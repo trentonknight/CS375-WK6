@@ -9,7 +9,7 @@
 \maketitle
 \section{}
 
-$$L =\{a^n b^{2n}\mid n \ge 1\} = \{abb, aabbbb, aaabbbbbb,...\}$$
+$$\mathbf{L =\{a^n b^{2n}\mid n \ge 1\} = \{abb, aabbbb, aaabbbbbb,...\}}$$
 
 
 
@@ -21,7 +21,7 @@ For any regular language L, there exists a number p such that for any string w i
 \item $\mid y \mid \ge 1$
 \item Then $x = a^n, y = a^n, z = b^{p+1}$
 \item $xy^2z \ni L$
-\item This is a contradiction so language is nonregular.
+\item This is a contradiction so the shown language is nonregular.
 \end{itemize}
 \end{proof}
 
@@ -42,6 +42,8 @@ For any regular language L, there exists a number p such that for any string w i
 \section{}
 \begin{enumerate}
 \item Palindromes
+\begin{proof}
+For any regular language L, there exists a number p such that for any string w in L of length at least p there are strings x,y,z such that
 \begin{enumerate}
 \item If w = xyz.
 \item And if x = a, y = b, z = a.
@@ -50,11 +52,34 @@ For any regular language L, there exists a number p such that for any string w i
 \item and $w = b^{90 + 1}ab^{90}$
 \item Therefore Palindromes are nonregular
 \end{enumerate}
+\end{proof}
 \item Equal
+\begin{proof}
+For any regular language L, there exists a number p such that for any string w in L of length at least p there are strings x,y,z such that
 \begin{enumerate}
-\item
+\item  EQUAL = $\{\Lambda \quad ab \quad ba \quad aabb \quad abab \quad abba \quad baab \quad baba \quad bbaa \quad aaabbb...\}$
+\item $\{a^nb^n\} = \mathbf{a^*b^*} \cap EQUAL$
+\item If $a^*b^*$ is regular then so is the result of $\mathbf{a^*b^*} \cap EQUAL$
+\item $w =  xyz$
+\item $\mid xy \mid \le  p$
+\item $\mid y \mid \ge 1$
+\item Then $x = a^n, y = a^2, z = b^n$
+\item So then xyyz would allow aaab which is not in this language.
+\item Therefore this language is nonregular
 \end{enumerate}
+\end{proof}
 \end{enumerate}
 \section{}
-
+Prove that the below generates the language defined by the regular expression: $\mathbf{a^*bb}$
+$$\mathbf {Prod 1 \quad S \to aS \mid bb}$$
+\begin{center}
+$S \Longrightarrow aS$\\
+$\Longrightarrow aaS$\\
+$\Longrightarrow aaaS$\\
+$\Longrightarrow aaaaS$\\
+$\Longrightarrow aaaaaS$\\
+This derivation could continue infinitely until terminal bb is appended.
+$\Longrightarrow aaaaabb$\\
+\end{center}
+\section{}
 \end{document}
