@@ -84,12 +84,40 @@ $$\mathbf {Prod 1 \quad S \to aS \mid bb}$$
 \end{equation}
 This derivation could continue infinitely until terminal bb is appended.
 \section{}
+To generate bbabaaa using: $(a + b)^*a(a + b)^*a(a + b)^*$
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to XaXaX}\\
 &\mathbf {Prod 2 \quad X \to aX \mid bX \mid \Lambda}\\
+&S \Longrightarrow XaXaX \quad \text{(by Prod 1)}\\
+&\Longrightarrow XaXaaX \quad \text{(by Prod 2)}\\
+&\Longrightarrow bXaXaaX \quad \text{(by Prod 2)}\\
+&\Longrightarrow bXaXaa \quad \text{(by Prod 2)}\\
+&\Longrightarrow bXabXaa \quad \text{(by Prod 2)}\\
+&\Longrightarrow bXabaXaa \quad \text{(by Prod 2)}\\
+&\Longrightarrow bbXabaXaa \quad \text{(by Prod 2)}\\
+&\Longrightarrow bbabaXaa \quad \text{(by Prod 2)}\\
+&\Longrightarrow bbabaaa \quad \text{(by Prod 2)}\\
 \end{split}
 \end{equation}
 \section{}
+\begin{equation}
+\begin{split}
+&\mathbf {Prod 1 \quad S \to Xa}\\
+&\mathbf {Prod 2 \quad X \to bbX \mid bbS \mid bb\mid\Lambda}\\
+\end{split}
+\end{equation}
+\section{}
+\section{}
+\begin{equation}
+\begin{split}
+\end{split}
+\end{equation}
+\section{}
+\section{}
+\begin{equation}
+\begin{split}
+\end{split}
+\end{equation}
 \section{}
 \end{document}
