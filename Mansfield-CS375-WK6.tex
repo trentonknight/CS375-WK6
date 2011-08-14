@@ -140,6 +140,7 @@ This CFG cannot match aaaa, abaa, or bbaa. The only string of length 4 is aabb:
 &\mathbf {Prod 1 \quad S \to aSb \mid ab}\\
 \end{split}
 \end{equation}
+\begin{center}
 \begin{tikzpicture}[level 1/.style={sibling distance=6em},
                    level 2/.style={sibling distance=1em}, level distance=2cm,draw=green]]
 \node {S}
@@ -167,6 +168,7 @@ child {node {aSb} child {node {S} child {node {a}} child {node {S}child {node{ab
 child {node {aSb} child {node {S} child {node {a}} child {node {S}child {node{ab}}} child {node{b}}}}
 ;
 \end{tikzpicture} 
+\end{center}
 \clearpage
 %sub2
 \subsection{}
@@ -176,7 +178,7 @@ For strings aaaa, abaa, or bbaa. This CFG can create the string aaaa, bbaa:
 &\mathbf {Prod 1 \quad S \to aS \mid bS \mid a}\\
 \end{split}
 \end{equation}
-
+\begin{center}
 \begin{tikzpicture}[level 1/.style={sibling distance=6em},
                    level 2/.style={sibling distance=1em}, level distance=2cm,draw=red]]
 \node {S}
@@ -199,6 +201,7 @@ child {node {bS}child{node{S} child {node {a}}child {node {S} child {node {bS} c
 child {node {a}}
 ;
 \end{tikzpicture} 
+\end{center}
 \clearpage
 %sub3
 \subsection{}
@@ -209,7 +212,7 @@ For strings aaaa, abaa, or bbaa. This CFG can create the string aaaa, abaa:
 &\mathbf {Prod 2 \quad X \to aXa \mid a}\\
 \end{split}
 \end{equation}
-
+\begin{center}
 \begin{tikzpicture}[level 1/.style={sibling distance=14em},
                    level 2/.style={sibling distance=1.5em}, level distance=2cm,draw=red]]
 \node {S}
@@ -225,25 +228,40 @@ child {node {X} child{node{a}} child{node{a}}}
 
 ;
 \end{tikzpicture} 
+\end{center}
+\clearpage
 %sub4
 \subsection{}
+For strings aaaa, abaa, or bbaa. This CFG can create the string aaaa, abaa:
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to aAS \mid a}\\
 &\mathbf {Prod 2 \quad A \to SbA \mid SS \mid ba}\\
 \end{split}
 \end{equation}
+\begin{center}
 \begin{tikzpicture}[level 1/.style={sibling distance=6em},
                    level 2/.style={sibling distance=1em}, level distance=2cm, draw=green!40!orange!90!]]
 \node {S}
 child {node {a}}
 child {node {A} child{node {S}child {node {a}}} child{node {S}child {node {a}}}}
 child {node {S}child {node {a}}}
-
 ;
 \end{tikzpicture} 
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm, draw=blue!40!orange!90!]]
+\node {S}
+child {node {a}}
+child {node {A} child{node{ba}}}
+child {node {S} child{node{a}}}
+;
+\end{tikzpicture} 
+\end{center}
+\clearpage
 %sub5
 \subsection{}
+For strings aaaa, abaa, or bbaa. This CFG can create the string bbaa:
+\begin{center}
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to aB \mid bA}\\
@@ -251,13 +269,15 @@ child {node {S}child {node {a}}}
 &\mathbf{Prod 3 \quad B \to b \mid bS \mid aBB}\\
 \end{split}
 \end{equation}
-\begin{tikzpicture}[level 1/.style={sibling distance=6em},
-                   level 2/.style={sibling distance=1em}, level distance=2cm]]
+\begin{tikzpicture}[level 1/.style={sibling distance=9em},
+                   level 2/.style={sibling distance=1em}, level distance=3cm,draw=red!35!orange!90!]]
 \node {S}
-child {node {}}
+child {node {b}}
+child {node {A} child{node{b}} child{node{A} child{node{a}}}child{node{A} child{node{a}}}}
 
 ;
 \end{tikzpicture} 
+\end{center}
 \clearpage
 %8
 \section{}

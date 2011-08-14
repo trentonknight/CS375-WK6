@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 AUG 2011 12:48
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 AUG 2011 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,27 +632,28 @@ Missing character: There is no ] in font nullfont!
 ]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
-
-Overfull \hbox (21.89679pt too wide) in paragraph at lines 219--229
-[][] [] 
- []
-
-Missing character: There is no ] in font nullfont!
-[6
+ [6
 
 ]
 Missing character: There is no ] in font nullfont!
- [7] [8
+Missing character: There is no ] in font nullfont!
+ [7
+
+]
+Missing character: There is no ] in font nullfont!
+ [8
+
+] [9
 
 ] (./Mansfield-CS375-WK6.aux) ) 
 Here is how much of TeX's memory you used:
- 13614 strings out of 493633
- 287195 string characters out of 3143378
- 354818 words of memory out of 3000000
- 16630 multiletter control sequences out of 15000+200000
+ 13686 strings out of 493633
+ 288803 string characters out of 3143378
+ 354964 words of memory out of 3000000
+ 16702 multiletter control sequences out of 15000+200000
  10901 words of font info for 39 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 56i,21n,73p,488b,1973s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,21n,73p,488b,2026s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
@@ -664,10 +665,10 @@ fonts/cm/cmr8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti12.pfb>
-Output written on Mansfield-CS375-WK6.pdf (9 pages, 110168 bytes).
+Output written on Mansfield-CS375-WK6.pdf (10 pages, 111303 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 
