@@ -177,7 +177,7 @@ For strings aaaa, abaa, or bbaa. This CFG can create the string aaaa, bbaa:
 \end{split}
 \end{equation}
 
-\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
                    level 2/.style={sibling distance=1em}, level distance=2cm,draw=red]]
 \node {S}
 child {node {aS} child{node{S} child {node {a}}child {node {a}}}}
@@ -185,40 +185,43 @@ child {node {a}}
 child {node {a}}
 ;
 \end{tikzpicture} 
-\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
                    level 2/.style={sibling distance=1em}, level distance=2cm,draw=blue]]
 \node {S}
 child {node {bS}child{node{S} child {node {b}}child {node {S} child {node {bS} child {node{S} child{node {b}} child{node{S} child{node{a}}}}}}}}
 child {node {a}}
 ;
 \end{tikzpicture} 
-\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
                    level 2/.style={sibling distance=1em}, level distance=2cm,draw=orange]]
 \node {S}
 child {node {bS}child{node{S} child {node {a}}child {node {S} child {node {bS} child {node{S} child{node {b}} child{node{S} child{node{a}}}}}}}}
 child {node {a}}
 ;
 \end{tikzpicture} 
-
 \clearpage
 %sub3
 \subsection{}
-This CFG can create the string aaaa:
+For strings aaaa, abaa, or bbaa. This CFG can create the string aaaa, abaa:
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to aS \mid aSb \mid X}\\
 &\mathbf {Prod 2 \quad X \to aXa \mid a}\\
 \end{split}
 \end{equation}
-\begin{tikzpicture}[level 1/.style={sibling distance=6em},
-                   level 2/.style={sibling distance=1.5em}, level distance=2cm]]
+
+\begin{tikzpicture}[level 1/.style={sibling distance=14em},
+                   level 2/.style={sibling distance=1.5em}, level distance=2cm,draw=red]]
 \node {S}
-child {node {aS} child {node{X}child {node{a}}}}
-child {node {aSb}child {node{X}child {node{a}}}}
-child {node {X}
-child {node{aXa}child {node{X}child {node{a}}}}
-child {node{a}}
-}
+child {node {a}}
+child{node{S} child{node{X} child{node{a}}child{node{X}child{node{a}}}child{node{a}}}}
+;
+\end{tikzpicture} 
+\begin{tikzpicture}[level 1/.style={sibling distance=14em},
+                   level 2/.style={sibling distance=1.5em}, level distance=2cm,draw=blue]]
+\node {S}
+child {node {S} child{node{a}} child{node{b}}}
+child {node {X} child{node{a}} child{node{a}}}
 
 ;
 \end{tikzpicture} 
@@ -231,7 +234,7 @@ child {node{a}}
 \end{split}
 \end{equation}
 \begin{tikzpicture}[level 1/.style={sibling distance=6em},
-                   level 2/.style={sibling distance=1em}, level distance=2cm]]
+                   level 2/.style={sibling distance=1em}, level distance=2cm,draw=green]]
 \node {S}
 child {node {}}
 
