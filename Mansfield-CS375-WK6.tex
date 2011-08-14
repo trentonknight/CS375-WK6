@@ -545,6 +545,25 @@ child{node{X}child{node{a}}}
 \end{equation}
 \subsubsection{Ambiguous}
 
+\begin{equation}
+\begin{split}
+&S \Longrightarrow aS\\
+&\quad \Longrightarrow aaS\\
+&\quad \Longrightarrow aaaS\\
+&\quad \Longrightarrow aaa \Lambda\\
+&\quad \Longrightarrow aaa 
+\end{split}
+\end{equation}
+Second Example
+\begin{equation}
+\begin{split}
+&S \Longrightarrow aaS\\
+&\quad \Longrightarrow aaaS\\
+&\quad \Longrightarrow aaa \Lambda\\
+&\quad \Longrightarrow aaa 
+\end{split}
+\end{equation}
+
 \begin{center}
 \begin{tikzpicture}[level 1/.style={sibling distance=4em},
                    level 2/.style={sibling distance=2em}, level distance=2cm,draw=orange!75!blue!70!]]
@@ -562,10 +581,17 @@ child{node{S} child{node{a}} child{node{S} child{node{$\Lambda$}}}}
 ;
 \end{tikzpicture} 
 \end{center}
-
-
-
+\clearpage
 \subsubsection{Non-Ambiguous}
+\begin{equation}
+\begin{split}
+&S \Longrightarrow bS\\
+&\quad \Longrightarrow bbS\\
+&\quad \Longrightarrow bbbS\\
+&\quad \Longrightarrow bbb \Lambda\\ 
+&\quad \Longrightarrow bbb 
+\end{split}
+\end{equation}
 \begin{center}
 \begin{tikzpicture}[level 1/.style={sibling distance=4em},
                    level 2/.style={sibling distance=4em}, level distance=2cm,draw=orange!75!green!70!]]
