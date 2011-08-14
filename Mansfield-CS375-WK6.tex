@@ -371,6 +371,41 @@ child {node {A} child{node{A} child{node{a}}} child{node{A} child{node{A} child{
 &\mathbf {Prod 2 \quad X \to  aX \mid bX \mid \Lambda }
 \end{split}
 \end{equation}
+\subsubsection{Ambiguous}
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=yellow!35!brown!90!]]
+\node {S}
+child{node{X} child{node{a}} child{node{X} child{node{$\Lambda$}}}}
+child{node{a}}
+child{node{X} child{node{$\Lambda$}}}
+
+;
+\end{tikzpicture} 
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=yellow!35!green!90!]]
+\node {S}
+child{node{X} child{node{$\Lambda$}}}
+child{node{a}}
+child{node{X} child{node{a}} child{node{X} child{node{$\Lambda$}}}}
+;
+\end{tikzpicture} 
+\subsubsection{Non-Ambiguous}
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=yellow!15!blue!90!]]
+\node {S}
+child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X}}}}}
+child{node{a}}
+child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X}}}}}
+;
+\end{tikzpicture} 
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=red!75!blue!70!]]
+\node {S}
+child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X}}}}}
+child{node{a}}
+child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X}}}}}
+;
+\end{tikzpicture} 
 
 \subsection{}
 
@@ -380,7 +415,22 @@ child {node {A} child{node{A} child{node{a}}} child{node{A} child{node{A} child{
 &\mathbf {Prod 2 \quad  X\to  aX \mid a}
 \end{split}
 \end{equation}
-
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=yellow!75!blue!70!]]
+\node {S}
+child{node{a}}
+child{node{S}child{node{$\Lambda$}}}
+child{node{X} child{node{a}} child{node{S} child{node{$\Lambda$}}} child{node{X} child{node{a}}}}
+;
+\end{tikzpicture} 
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=orange!75!blue!70!]]
+\node {S}
+child{node{a}}
+child{node{S}child{node{X} child{node{a}}}}
+child{node{X} child{node{a}} child{node{S} child{node{$\Lambda$}}} child{node{X} child{node{$\Lambda$}}}}
+;
+\end{tikzpicture} 
 \subsection{}
 
 \begin{equation}
