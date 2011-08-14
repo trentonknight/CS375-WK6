@@ -372,6 +372,27 @@ child {node {A} child{node{A} child{node{a}}} child{node{A} child{node{A} child{
 \end{split}
 \end{equation}
 \subsubsection{Ambiguous}
+\begin{equation}
+\begin{split}
+&S \Longrightarrow XaX\\
+&X \Longrightarrow aXaX\\
+&\quad \Longrightarrow a\Lambda aX\\
+&\quad \Longrightarrow aaX\\
+&\quad \Longrightarrow aa\Lambda\\
+&\quad \Longrightarrow aa\\
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+&S \Longrightarrow XaX\\
+&X \Longrightarrow \Lambda aX\\
+&\quad \Longrightarrow aaX\\
+&\quad \Longrightarrow aa\Lambda\\
+&\quad \Longrightarrow aa\\
+\end{split}
+\end{equation}
+
 \begin{tikzpicture}[level 1/.style={sibling distance=4em},
                    level 2/.style={sibling distance=2em}, level distance=2cm,draw=yellow!35!brown!90!]]
 \node {S}
@@ -390,25 +411,56 @@ child{node{X} child{node{a}} child{node{X} child{node{$\Lambda$}}}}
 ;
 \end{tikzpicture} 
 \subsubsection{Non-Ambiguous}
+\begin{equation}
+\begin{split}
+&S \Longrightarrow XaX\\
+&X \Longrightarrow aXaX\\
+&\quad \Longrightarrow aaXaX\\
+&\quad \Longrightarrow aaaXaX\\
+&\quad \Longrightarrow aaa \Lambda aX\\
+&\quad \Longrightarrow aaaaaX\\
+&\quad \Longrightarrow aaaaaaX\\
+&\quad \Longrightarrow aaaaaaaX\\
+&\quad \Longrightarrow aaaaaaa \Lambda \\
+&\quad \Longrightarrow aaaaaaa
+\end{split}
+\end{equation}
 \begin{tikzpicture}[level 1/.style={sibling distance=4em},
                    level 2/.style={sibling distance=2em}, level distance=2cm,draw=yellow!15!blue!90!]]
 \node {S}
-child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X}}}}}
+child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{$\Lambda$}}} }}}
 child{node{a}}
-child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X}}}}}
+child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{a}} child{node{X} child{node{$\Lambda$}}}}}}
 ;
 \end{tikzpicture} 
+
+\begin{equation}
+\begin{split}
+&S \Longrightarrow XaX\\
+&X \Longrightarrow bXaX\\
+&\quad \Longrightarrow bbXaX\\
+&\quad \Longrightarrow bbbXaX\\
+&\quad \Longrightarrow bbb \Lambda aX\\
+&\quad \Longrightarrow bbbbbX\\
+&\quad \Longrightarrow bbbbbbX\\
+&\quad \Longrightarrow bbbbbbbX\\
+&\quad \Longrightarrow bbbbbbb \Lambda \\
+&\quad \Longrightarrow bbbbbbb
+\end{split}
+\end{equation}
+
+
 \begin{tikzpicture}[level 1/.style={sibling distance=4em},
                    level 2/.style={sibling distance=2em}, level distance=2cm,draw=red!75!blue!70!]]
 \node {S}
-child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X}}}}}
+child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{$\Lambda$}}}}}}
 child{node{a}}
-child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X}}}}}
+child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{b}} child{node{X} child{node{$\Lambda$}}}}}}
 ;
 \end{tikzpicture} 
-
+\clearpage
 \subsection{}
-
+\subsubsection{Ambiguous}
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad  S \to  aSX\mid \Lambda}\\
@@ -431,12 +483,59 @@ child{node{S}child{node{X} child{node{a}}}}
 child{node{X} child{node{a}} child{node{S} child{node{$\Lambda$}}} child{node{X} child{node{$\Lambda$}}}}
 ;
 \end{tikzpicture} 
-\subsection{}
+\subsubsection{Non-Ambiguous}
+\begin{tikzpicture}[level 1/.style={sibling distance=7em},
+                              level 2/.style={sibling distance=6em},
+                              level 3/.style={sibling distance=5em},
+                              level distance=2cm,draw=orange!75!yellow!70!]]
+                   
+\node {S}
+child{node{a}}
+child{node{S}child{node{a}}
+child{node{S}child{node{a}}
+child{node{S} child{node{$\Lambda$}}}
+child{node{X}child{node{a}}}}
+child{node{X}child{node{a}}}}
+child{node{X}child{node{a}}}
 
+;
+\end{tikzpicture} 
+\subsection{}
 \begin{equation}
 \mathbf {Prod 1 \quad  S\to  aS \mid bS \mid aaS \mid \Lambda}
 \end{equation}
+\subsubsection{Ambiguous}
+\begin{center}
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=orange!75!blue!70!]]
+\node {S}
+child{node{a}}
+child{node{S} child{node{a}} child{node{a}} child{node{S} child{node{$\Lambda$}}}}
+;
+\end{tikzpicture} 
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=2em}, level distance=2cm,draw=red!75!purple!70!]]
+\node {S}
+child{node{a}}
+child{node{a}}
+child{node{S} child{node{a}} child{node{S} child{node{$\Lambda$}}}}
+;
+\end{tikzpicture} 
+\end{center}
+\subsubsection{Non-Ambiguous}
+\begin{center}
+\begin{tikzpicture}[level 1/.style={sibling distance=4em},
+                   level 2/.style={sibling distance=4em}, level distance=2cm,draw=orange!75!green!70!]]
+\node {S}
+child{node{b}}
+child{node{S}child{node{b}}
+child{node{S}child{node{b}}
+child{node{S}child{node{$\Lambda$}}}}}
 
+;
+\end{tikzpicture} 
+\end{center}
+\clearpage
 %10
 \section{}
 \subsection{}
