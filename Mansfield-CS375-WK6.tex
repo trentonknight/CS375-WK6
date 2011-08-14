@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper,oneside]{report}
+
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{tikz}
@@ -84,6 +85,19 @@ $$\mathbf {Prod 1 \quad S \to aS \mid bb}$$
 \end{equation}
 This derivation could continue infinitely until terminal bb is appended.
 \section{}
+\begin{equation}
+\begin{split}
+&\mathbf {Prod 1 \quad S \to aX}\\
+&\mathbf{Prod 2 \quad X \to aX \mid bX \mid \Lambda}\\
+&S \Longrightarrow \\
+&\Longrightarrow \\
+&\Longrightarrow \\
+&\Longrightarrow \\
+&\Longrightarrow \\
+&\Longrightarrow \\
+\end{split}
+\end{equation}
+\section{}
 To generate bbabaaa using: $(a + b)^*a(a + b)^*a(a + b)^*$
 \begin{equation}
 \begin{split}
@@ -107,17 +121,73 @@ To generate bbabaaa using: $(a + b)^*a(a + b)^*a(a + b)^*$
 &\mathbf {Prod 2 \quad X \to bbX \mid bbS \mid bb\mid\Lambda}\\
 \end{split}
 \end{equation}
+\clearpage
 \section{}
-\section{}
+\subsection{}
 \begin{equation}
 \begin{split}
+&\mathbf {Prod 1 \quad S \to aSb \mid ab}\\
 \end{split}
 \end{equation}
-\section{}
-\section{}
+\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\node {S}
+child {node {aSb} child {node {ab}}}
+child {node {ab}}
+;
+\end{tikzpicture} 
+
+\subsection{}
 \begin{equation}
 \begin{split}
+&\mathbf {Prod 1 \quad S \to aS \mid bS \mid a}\\
 \end{split}
 \end{equation}
+\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\node {S}
+child {node {}}
+
+;
+\end{tikzpicture} 
+\subsection{}
+\begin{equation}
+\begin{split}
+&\mathbf {Prod 1 \quad S \to aS \mid aSb \mid X}\\
+&\mathbf {Prod 2 \quad X \to aXa \mid a}\\
+\end{split}
+\end{equation}
+\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\node {S}
+child {node {}}
+
+;
+\end{tikzpicture} 
+\subsection{}
+\begin{equation}
+\begin{split}
+&\mathbf {Prod 1 \quad S \to aAS \mid a}\\
+&\mathbf {Prod 2 \quad A \to SbA \mid SS \mid ba}\\
+\end{split}
+\end{equation}
+\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\node {S}
+child {node {}}
+
+;
+\end{tikzpicture} 
+\subsection{}
+\begin{equation}
+\begin{split}
+&\mathbf {Prod 1 \quad S \to aB \mid bA}\\
+&\mathbf {Prod 2 \quad A \to a \mid aS \mid bAA}\\
+&\mathbf{Prod 3 \quad B \to b \mid bS \mid aBB}\\
+\end{split}
+\end{equation}
+\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\node {S}
+child {node {}}
+
+;
+\end{tikzpicture} 
+\clearpage
 \section{}
 \end{document}
