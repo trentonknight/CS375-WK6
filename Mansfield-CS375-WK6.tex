@@ -234,9 +234,11 @@ child {node {X} child{node{a}} child{node{a}}}
 \end{split}
 \end{equation}
 \begin{tikzpicture}[level 1/.style={sibling distance=6em},
-                   level 2/.style={sibling distance=1em}, level distance=2cm,draw=green]]
+                   level 2/.style={sibling distance=1em}, level distance=2cm, draw=green!40!orange!90!]]
 \node {S}
-child {node {}}
+child {node {a}}
+child {node {A} child{node {S}child {node {a}}} child{node {S}child {node {a}}}}
+child {node {S}child {node {a}}}
 
 ;
 \end{tikzpicture} 
