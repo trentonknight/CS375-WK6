@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  13 AUG 2011 21:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  13 AUG 2011 22:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,32 +603,43 @@ e
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 21.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
  [1]
-Overfull \hbox (47.15488pt too wide) in paragraph at lines 61--62
+Overfull \hbox (47.15488pt too wide) in paragraph at lines 63--64
 []\OT1/cmr/m/n/12 EQUAL = $\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 ^^C \OML/cmm/m/it/
 12 ab ba aabb abab abba baab baba bbaa aaabbb:::\OMS/cmsy/m/n/12 g$ 
  []
 
-[2] [3] [4
+[2] [3]
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ] in font nullfont!
+ [4
 
-] [5] [6
+]
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ] in font nullfont!
+ [5
+
+] [6
 
 ] (./Mansfield-CS375-WK6.aux) ) 
 Here is how much of TeX's memory you used:
- 13140 strings out of 493633
- 276120 string characters out of 3143378
- 347398 words of memory out of 3000000
- 16156 multiletter control sequences out of 15000+200000
+ 13241 strings out of 493633
+ 278232 string characters out of 3143378
+ 346398 words of memory out of 3000000
+ 16257 multiletter control sequences out of 15000+200000
  10901 words of font info for 39 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 56i,17n,73p,488b,921s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,17n,73p,488b,867s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
@@ -640,7 +651,7 @@ fonts/cm/cmr8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti12.pfb>
-Output written on Mansfield-CS375-WK6.pdf (7 pages, 104770 bytes).
+Output written on Mansfield-CS375-WK6.pdf (7 pages, 106690 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream

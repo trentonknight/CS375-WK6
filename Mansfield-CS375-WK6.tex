@@ -8,6 +8,7 @@
 \title{CS375 Week 6}
 \author{Jason N Mansfield}
 \maketitle
+%1
 \section{}
 
 $$\mathbf{L =\{a^n b^{2n}\mid n \ge 1\} = \{abb, aabbbb, aaabbbbbb,...\}}$$
@@ -33,13 +34,14 @@ For any regular language L, there exists a number p such that for any string w i
 \tikzstyle{every state}=[draw=black,text=black, ball color=brown]
 \node[initial,state] (1) {1};
 \node[state][right of=1](2){2};
-\node[state, accepting][below right of=1](3){3};
+\node[state, accepting][below of=1](3){3};
 \path (1)edge node{a}(2)
           (2)edge node{b}(3)
           (3)edge node{b}(1);       
 \end{tikzpicture} 
 \end{center}
 \end{figure}
+%2
 \section{}
 \begin{enumerate}
 \item Palindromes
@@ -70,6 +72,7 @@ For any regular language L, there exists a number p such that for any string w i
 \end{enumerate}
 \end{proof}
 \end{enumerate}
+%3
 \section{}
 Prove that the below generates the language defined by the regular expression: $\mathbf{a^*bb}$
 $$\mathbf {Prod 1 \quad S \to aS \mid bb}$$
@@ -84,19 +87,23 @@ $$\mathbf {Prod 1 \quad S \to aS \mid bb}$$
 \end{split}
 \end{equation}
 This derivation could continue infinitely until terminal bb is appended.
+%4
 \section{}
+To generate aabbab using: $a(a +b)*$
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to aX}\\
 &\mathbf{Prod 2 \quad X \to aX \mid bX \mid \Lambda}\\
-&S \Longrightarrow \\
-&\Longrightarrow \\
-&\Longrightarrow \\
-&\Longrightarrow \\
-&\Longrightarrow \\
-&\Longrightarrow \\
+&S \Longrightarrow aX \quad \text{(by Prod 1)}\\
+&\Longrightarrow aaX \quad \text{(by Prod 2)}\\
+&\Longrightarrow aabX \quad \text{(by Prod 2)}\\
+&\Longrightarrow aabbX \quad \text{(by Prod 2)}\\
+&\Longrightarrow aabbaX \quad \text{(by Prod 2)}\\
+&\Longrightarrow aabbabX \quad \text{(by Prod 2)}\\
+&\Longrightarrow aabbab\Lambda \quad \text{(by Prod 2)}\\
 \end{split}
 \end{equation}
+%5
 \section{}
 To generate bbabaaa using: $(a + b)^*a(a + b)^*a(a + b)^*$
 \begin{equation}
@@ -114,6 +121,7 @@ To generate bbabaaa using: $(a + b)^*a(a + b)^*a(a + b)^*$
 &\Longrightarrow bbabaaa \quad \text{(by Prod 2)}\\
 \end{split}
 \end{equation}
+%6
 \section{}
 \begin{equation}
 \begin{split}
@@ -122,45 +130,74 @@ To generate bbabaaa using: $(a + b)^*a(a + b)^*a(a + b)^*$
 \end{split}
 \end{equation}
 \clearpage
+%7
 \section{}
+%sub1
 \subsection{}
+This CFG cannot match aaaa, abaa, or bbaa as it will always be abab:
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to aSb \mid ab}\\
 \end{split}
 \end{equation}
-\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm]]
 \node {S}
 child {node {aSb} child {node {ab}}}
 child {node {ab}}
 ;
 \end{tikzpicture} 
-
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm]]
+\node {S}
+child {node {aSb} child {node {ab}}}
+child {node {aSb} child {node {ab}}}
+;
+\end{tikzpicture} 
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm]]
+\node {S}
+child {node {ab}}
+child {node {aSb} child {node {ab}}}
+;
+\end{tikzpicture} 
+%sub2
 \subsection{}
+This CFG can create the string aaaa:
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to aS \mid bS \mid a}\\
 \end{split}
 \end{equation}
-\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm]]
 \node {S}
-child {node {}}
-
+child {node {aS}child {node {a}}child {node {a}}}
+child {node {bS}child {node {a}}child {node {a}}}
+child {node {a}}
 ;
 \end{tikzpicture} 
+
+\clearpage
+%sub3
 \subsection{}
+
 \begin{equation}
 \begin{split}
 &\mathbf {Prod 1 \quad S \to aS \mid aSb \mid X}\\
 &\mathbf {Prod 2 \quad X \to aXa \mid a}\\
 \end{split}
 \end{equation}
-\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm]]
 \node {S}
-child {node {}}
+child {node {aS}}
+child {node {aSb}}
+child {node {X}}
 
 ;
 \end{tikzpicture} 
+%sub4
 \subsection{}
 \begin{equation}
 \begin{split}
@@ -168,12 +205,14 @@ child {node {}}
 &\mathbf {Prod 2 \quad A \to SbA \mid SS \mid ba}\\
 \end{split}
 \end{equation}
-\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm]]
 \node {S}
 child {node {}}
 
 ;
 \end{tikzpicture} 
+%sub5
 \subsection{}
 \begin{equation}
 \begin{split}
@@ -182,12 +221,20 @@ child {node {}}
 &\mathbf{Prod 3 \quad B \to b \mid bS \mid aBB}\\
 \end{split}
 \end{equation}
-\begin{tikzpicture}[-,>=stealth',shorten >=1pt,auto,node distance=4.8cm, semithick]
+\begin{tikzpicture}[level 1/.style={sibling distance=6em},
+                   level 2/.style={sibling distance=1em}, level distance=2cm]]
 \node {S}
 child {node {}}
 
 ;
 \end{tikzpicture} 
 \clearpage
+%8
+\section{}
+%9
+\section{}
+%10
+\section{}
+%11
 \section{}
 \end{document}
