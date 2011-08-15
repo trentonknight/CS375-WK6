@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 AUG 2011 20:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 AUG 2011 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,7 +698,7 @@ Missing character: There is no ] in font nullfont!
 Here is how much of TeX's memory you used:
  15021 strings out of 493633
  319672 string characters out of 3143378
- 390149 words of memory out of 3000000
+ 390169 words of memory out of 3000000
  18037 multiletter control sequences out of 15000+200000
  10901 words of font info for 39 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
@@ -714,7 +714,7 @@ fonts/cm/cmr8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti12.pfb>
-Output written on Mansfield-CS375-WK6.pdf (22 pages, 131728 bytes).
+Output written on Mansfield-CS375-WK6.pdf (22 pages, 132415 bytes).
 PDF statistics:
  136 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
